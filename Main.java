@@ -5,5 +5,17 @@ public class Main{
         String[] members = {"XIA PEISU", "ELLIS, CLARENCE", "VON AHN, LUIS"};
         test.addMembers(members, 2025);
         System.out.println(test.getMemberList());
+        MemberInfo[] roster = {
+            new MemberInfo("SMITH, JANE", 2019, false),
+            new MemberInfo("FOX, STEVE", 2018, true),
+            new MemberInfo("XIN, MICHAEL", 2017,false),
+            new MemberInfo("GARCIA, MARIA", 2020, true)};
+            
+            ArrayList<MemberInfo> memberList = new ArrayList<>();
+            for(MemberInfo m : roster) memberList.add(m);
+            test.setMemberList(memberList);
+            System.out.println(test.removeMembers(2018));
+            System.out.println(test.getMemberList());
+
     }
 }

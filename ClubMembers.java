@@ -15,6 +15,22 @@ public ArrayList<MemberInfo> getMemberList(){
     return memberList;
 }
 public ArrayList<MemberInfo> removeMembers(int year){
-    return memberList;
+    ArrayList<MemberInfo> alumni = new ArrayList<MemberInfo>();
+    for(int i = 0; i < memberList.size(); i++){
+        MemberInfo member = memberList.get(i);
+        if(member.getGradYear() <= year){
+            if(member.inGoodStanding() == true){
+            alumni.add(member);
+        }
+        memberList.remove(i);
+        i--;
+
+        }
+
+    }
+    return alumni;
+}
+public void setMemberList(ArrayList<MemberInfo> members){
+    memberList = members;
 }
 }

@@ -8,6 +8,14 @@ public class MemberInfo{
         this.hasGoodStanding = hasGoodStanding;
     }
 
+    public String toString(){
+        String s = "\nName: " + name + "\n";
+        s+= "Year: " + gradYear + "\n";
+        return s + "Good Standing: " + hasGoodStanding + "\n";
+    }
+    
+    
+    
     public int getGradYear(){
         return gradYear;
     }
